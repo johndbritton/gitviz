@@ -205,7 +205,7 @@ def vertex_opts_for_obj(obj, **opts):
             tooltip='Tree: ' + shortsha()
         )
     elif obj.type_name == 'blob':
-        label = q(get_blob_content(obj))
+        label = q(get_blob_content(obj) or 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391')
         opts.update(
             style='filled',
             fillcolor='#ffffff',

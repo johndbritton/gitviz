@@ -162,7 +162,7 @@ if (require.main === module) {
         throw 'not existing:'+ROOT;
 
     spawn('./build-canviz', function(err) {
-        if (err) throw err;
+        // if (err) throw err;
 
         var server = http.createServer(app);
         app.set('io', require('socket.io').listen(server));
